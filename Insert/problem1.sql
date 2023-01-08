@@ -1,0 +1,1 @@
+INSERT INTO Song (title, artist) VALUES ('Amazing God', 'Mercy Chinwo');
