@@ -10,6 +10,6 @@ public class MaxMinusMin {
      * @return the max value of nums minus the min value of nums.
      */
     public int difference(List<Integer> nums){
-        return 0;
+        return nums.stream().max(Integer::compareTo).get() - nums.stream().min(Integer::compareTo).get();
     }
 }
