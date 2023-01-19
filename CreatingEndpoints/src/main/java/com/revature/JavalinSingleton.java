@@ -17,7 +17,7 @@ public class JavalinSingleton {
         app.get("/hello", ctx -> {
             ctx.result("Hello World");
         });
-        app.start(9000);
+        
         
 
         return app;
