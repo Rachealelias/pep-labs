@@ -18,7 +18,9 @@ public class JavalinSingleton {
          */
         app.post("/problem1", ctx -> {
                 //implement logic here
-                String jsonString = ctx.body();
+                Song song = ctx.bodyAsClass(Song.class);
+                    ctx.result(song.getArtistName());
+                
             
         });
 
@@ -30,7 +32,9 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem2", ctx -> {
-               //implement logic here
+            Song song = ctx.bodyAsClass(Song.class);
+            song.setArtistName("Beatles");
+            ctx.json(song);
         });
 
 
