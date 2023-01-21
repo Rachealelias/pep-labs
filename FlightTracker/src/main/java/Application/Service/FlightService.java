@@ -45,7 +45,10 @@ public class FlightService {
      *         inform our provide the front-end client with information about the added Flight.
      */
     public Flight addFlight(Flight flight){
-        return flightDAO.insertFlight(flight);
+        Flight addFlightFromDb = this.flightDAO.insertFlight(flight);
+        if (addFlightFromDb == null) return null;
+         flightDAO.insertFlight(flight);
+         return this.flightDAO.insertFlight(flight);
     }
 
     /**
